@@ -1,0 +1,39 @@
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-image: url("anime.jpg");
+    background-repeat: no-repeat;
+    color: aquamarine;
+    font-family: Helvetica;
+    font-size: 1.2em;
+    text-decoration: aqua;
+    font-weight: 900;
+    text-shadow: 2px 0 0 rgb(25, 25, 25), -2px 0 0 rgb(20, 20, 20), 0 2px 0 rgb(9, 9, 9), 0 -2px 0 rgb(25, 25, 25), 1px 1px rgb(20, 20, 20), -1px -1px 0 rgb(25, 25, 25), 1px -1px 0 rgb(9, 9, 9), -1px 1px 0 rgb(25, 25, 25);
+}
+
+.navbar__title {
+    margin-right: auto;
+    font-size: 150%;
+    padding: 12px 16px;
+    z-index: 1;
+}
+
+.navbar__item {
+   
+    cursor: pointer;
+    vertical-align: middle;
+    text-decoration: solid;
+    opacity: 1;
+    display: flex;
+    width: 25vw;
+    justify-content: space-evenly;
+}
+
+.search{
+    
+}
+
+.nav_bar_blur {
+    backdrop-filter: blur(4px);
+}

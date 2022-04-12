@@ -5,7 +5,12 @@ import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
+import Accordion from '@mui/material/Accordion';
+import AccordionSummary from '@mui/material/AccordionSummary';
+import AccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+
 const AnimeCard = (animeData) => {
     
   return (
@@ -19,12 +24,13 @@ const AnimeCard = (animeData) => {
     //   <p>{animeData.animeInfo.description}</p>
     // </span></span>
     <div className="ele" style={{display:'flex',margin:"2%"}}>
-     <Card sx={{ maxWidth: 345 }} >
+     <Card className="change" sx={{ maxWidth: 345 }} >
      <CardMedia
        component="img"
        height="140"
        image={animeData.animeInfo.image}
        alt={animeData.animeInfo.title}
+       
      />
      <CardContent>
        <Typography gutterBottom variant="h5" component="div">
@@ -36,7 +42,26 @@ const AnimeCard = (animeData) => {
      </CardContent>
      <CardActions>
        
-       <Button size="small">Learn More</Button>
+     <div>
+      <Accordion>
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel1a-content"
+          id="panel1a-header"
+        >
+          <Typography >Details about the anime. Click Here!</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography>
+          Director:{animeData.animeInfo.director}<br/>
+    Producer: {animeData.animeInfo.producer}<br/>
+    Release Date: {animeData.animeInfo.release_date}<br/>
+    Running Time: {animeData.animeInfo.running_time}<br/>
+    Rt Score: {animeData.animeInfo.rt_score}<br/>
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
+      </div>
      </CardActions>
    </Card>
    </div>

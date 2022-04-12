@@ -1,1 +1,6 @@
-
+.change
+{
+    -webkit-box-shadow: 38px 28px 47px -22px rgba(255,255,255,0.69);
+    -moz-box-shadow: 38px 28px 47px -22px rgba(255,255,255,0.69);
+    box-shadow: 38px 28px 47px -22px rgba(255,255,255,0.69);
+}

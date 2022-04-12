@@ -1,18 +1,20 @@
 import React, { useState, useEffect } from "react";
 import AnimeCard from '../Api/AnimeCard';
  function FetchAPI() {
-  const [posts, setPosts] = useState([]);
-  let realData;
-  const joke = useState("");
+  const [posts, setPosts] = useState([""]);
+
   const fetchPost = async () => {
     console.log("frtching post");
   const response = await fetch(
       "https://ghibliapi.herokuapp.com/films"
     );
-  var data = await response.json();
-  console.log(data);
-  realData  = JSON.parse(data);
-  console.log(realData);
+  
+  
+  let data= await response.json();
+ setPosts(data);
+  // realData  = JSON.parse(data);
+  // // console.log("--------------------------------------------------------------------")
+  // console.log(realData);
   };
 
   useEffect(() => {
@@ -23,10 +25,13 @@ import AnimeCard from '../Api/AnimeCard';
     <p>  </p>
       <button onClick={fetchPost}> get new joke </button>
       <ul>
-      {realData.map((animeData) =>(
-        <AnimeCard animeInfo = {animeData} />
-      ))}
+      {posts.map((animeData) =>(
+          
+        <AnimeCard animeInfo ={animeData} />
+        // console.log(animeData.title)
+        ))}
       </ul>
+      {/* <ul>{posts.id}</ul> */}
     </div>
   );
 }

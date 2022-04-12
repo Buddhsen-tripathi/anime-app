@@ -1,10 +1,11 @@
 import React from 'react'
 
-const AnimeCard = ({data}) => {
-    console.log(data);
+const AnimeCard = (animeData) => {
+    
   return (
+     
     <div>
-      <h1>YOyo</h1>
+      <h1>{animeData.animeInfo.title}</h1>
     </div>
   )
 }

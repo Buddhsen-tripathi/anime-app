@@ -18,7 +18,7 @@ const AnimeCard = (animeData) => {
     //   {<img src = {animeData.animeInfo.image}></img>}
     //   <p>{animeData.animeInfo.description}</p>
     // </span></span>
-    <div className="ele" style={{display:'flex'}}>
+    <div className="ele" style={{display:'flex',margin:"2%"}}>
      <Card sx={{ maxWidth: 345 }} >
      <CardMedia
        component="img"
@@ -35,7 +35,7 @@ const AnimeCard = (animeData) => {
        </Typography>
      </CardContent>
      <CardActions>
-       <Button size="small">Share</Button>
+       
        <Button size="small">Learn More</Button>
      </CardActions>
    </Card>

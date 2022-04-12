@@ -23,7 +23,7 @@ import AnimeCard from '../Api/AnimeCard';
   return (
     <div >
     <p>  </p>
-      <button onClick={fetchPost}> get new joke </button>
+     
       <ul style={{display:"flex",flexDirection:'row,',flexWrap:'wrap', justifyContent:'space-evenly'}}>
       {posts.map((animeData) =>(
           

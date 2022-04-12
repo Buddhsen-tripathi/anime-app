@@ -1,6 +1,5 @@
 import React from 'react'
 import './Footer.css'
-import FetchAPI from '../Api/FetchAPI'
 const Footer = () => {
   return (
     <div>
@@ -19,7 +18,7 @@ const Footer = () => {
                   </div>
                   <div class="footer-social-icon">
                     <span>Follow us</span>
-                    <FetchAPI/>
+                    
                     <a href="#"><i class="fab fa-facebook-f facebook-bg"></i></a>
                     <a href="#"><i class="fab fa-twitter twitter-bg"></i></a>
                     <a href="#"><i class="fab fa-google-plus-g google-bg"></i></a>
